@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Texteditor</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <script src="main.js" async defer></script>
+        <div class="panel" >
+            <button onclick="bold()" class="bold" id="bold">Bold</button>
+            <button onclick="italic()" class="italic" id="italic">Italic</button>
+            <button onclick="underline()" class="underline" id="underline">Underline</button>
+            <button onclick="strike()" class="strike" id="strike">Strike</button>
+            <label class="color" for="color">Text Farbe:</label>
+            <input  type="color" class="color" id="color" value="black">
+            <label class="background" for="background">Background Farbe:</label>
+            <input  type="color" class="background" id="background" value="#f8f8f8">
+            <button onclick="marker()" id="marker" class="marker">Marker</button>
+            <button onclick="font()" class="font" id="font">Font</button>
+            <button onclick="left()" class="left" id="left">◀️</button>
+            <button onclick="center()" class="center" id="center">⏺</button>
+            <button onclick="right()" class="right" id="right">▶️</button>
+            <label for="fontsize" class="fontsizze">Schriftgröße:</label>
+            <input type="number"  name="fontsize" class="fontsize" id="fontsize" value="16">
+        </div>
+        <div>
+            <textarea id="textfeld">Some Text...</textarea>
+        </div>
+        <div> 
+            <button onclick="save()">Speichern</button>
+            <button onclick="localStorage.clear()">Speicher Löschen</button><br><br>
+        </div>
+    </body>
+</html>
